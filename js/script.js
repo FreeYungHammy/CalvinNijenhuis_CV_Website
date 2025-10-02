@@ -1,6 +1,15 @@
+// Debug: Script is loading
+console.log('CV Website JavaScript loaded successfully!');
+
 // Make functions globally accessible
 window.togglePhone = function() {
+  console.log('togglePhone called');
   const button = document.getElementById('phone-button');
+  if (!button) {
+    console.error('Phone button not found!');
+    return;
+  }
+  
   const showingNumber = button.getAttribute('data-showing') === 'true';
 
   if (!showingNumber) {
@@ -9,17 +18,25 @@ window.togglePhone = function() {
       <span class="text">+27 79 894 4821</span>
     `;
     button.setAttribute('data-showing', 'true');
+    console.log('Phone number revealed');
   } else {
     button.innerHTML = `
       <i class="fas fa-phone"></i>
       <span class="text">Phone Number</span>
     `;
     button.setAttribute('data-showing', 'false');
+    console.log('Phone number hidden');
   }
 };
 
 window.toggleEmail = function() {
+  console.log('toggleEmail called');
   const button = document.getElementById('email-button');
+  if (!button) {
+    console.error('Email button not found!');
+    return;
+  }
+  
   const showingEmail = button.getAttribute('data-showing') === 'true';
 
   if (!showingEmail) {
@@ -28,12 +45,14 @@ window.toggleEmail = function() {
       <span class="text">calvin@nijenhuis.life</span>
     `;
     button.setAttribute('data-showing', 'true');
+    console.log('Email address revealed');
   } else {
     button.innerHTML = `
       <i class="fas fa-envelope"></i>
       <span class="text">Email Address</span>
     `;
     button.setAttribute('data-showing', 'false');
+    console.log('Email address hidden');
   }
 };
 
@@ -97,7 +116,10 @@ class ThemeManager {
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
+  console.log('DOM loaded, initializing website functionality...');
+  
   // Initialize theme manager
+  console.log('Creating theme manager...');
   new ThemeManager();
 
   // Mobile navigation toggle
