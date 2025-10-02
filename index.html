@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calvin Nijenhuis - Aspiring Software Engineer</title>
+
+  <!-- Icons & Fonts -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="theme-toggle" id="themeToggle">
+        <div class="theme-toggle-track">
+          <div class="theme-toggle-thumb">
+            <i class="fas fa-sun sun-icon"></i>
+            <i class="fas fa-moon moon-icon"></i>
+          </div>
+        </div>
+      </div>
+      <button class="nav-toggle" id="navToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="nav" id="mainNav">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#portfolio" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education" class="nav-link">Education</a>
+      </nav>
+    </header>
+
+    <section class="profile-section">
+      <div class="profile-image-container">
+        <img src="img/profilepicture2.png" class="profile-image" alt="Calvin Nijenhuis"/>
+      </div>
+      <h1 class="name">Calvin Nijenhuis</h1>
+      <h2 class="specialization">Aspiring Software Engineer</h2>
+
+      <div class="contact-buttons">
+        <button onclick="toggleEmail()" class="contact-button" id="email-button" data-showing="false">
+          <i class="fas fa-envelope"></i>
+          <span class="text">Email Address</span>
+        </button>
+
+        <a href="https://github.com/FreeYungHammy" target="_blank" rel="noopener noreferrer" class="contact-button">
+          <i class="fab fa-github"></i>
+          <span class="text">GitHub</span>
+        </a>
+
+        <button onclick="togglePhone()" class="contact-button" id="phone-button" data-showing="false">
+          <i class="fas fa-phone"></i>
+          <span class="text" id="p-number">Phone Number</span>
+        </button>
+
+        <a href="./CalvinNijenhuisFinal_CV.pdf" target="_blank" rel="noopener noreferrer" class="contact-button">
+          <i class="fas fa-file-pdf"></i>
+          <span class="text">View My CV</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="about" class="section about-section">
+      <h3 class="section-title">About Me</h3>
+      <p class="about-text">
+        Hi, I'm Calvin Nijenhuis. I'm a student based in Stellenbosch, South Africa. I'm deeply passionate about technology that makes a tangible impact, whether it's through backend development, automation, or robotics.<br><br>
+        My long-term goal is to work remotely with a forward-thinking international tech organisation while remaining rooted in South Africa. I thrive in environments where people share a drive to build, problem-solve, and push boundaries.<br><br>
+        I'm an analytical thinker with a practical mindset. I'm not just interested in theory - I care about building things that work, that scale, and that solve real problems. Whether I'm designing software, managing a group project, or diving into a solo development challenge, I focus on creating clean and thoughtful solutions.<br><br>
+        Having travelled internationally from a young age, I value global collaboration and cultural exchange. I see each project and every team I join as a chance to learn, contribute, and grow. I'm excited to connect with others, solve meaningful challenges, and build a future doing what I love while making a real difference.
+      </p>
+    </section>
+
+    <section id="skills" class="section technical-skills-section">
+      <h3 class="section-title">Technical Skills & Technologies</h3>
+
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h4><i class="fas fa-code"></i> Languages</h4>
+          <div class="tech-tags">
+            <span class="tech-tag">C#</span>
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Python</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4><i class="fas fa-desktop"></i> IDEs & Frameworks</h4>
+          <div class="tech-tags">
+            <span class="tech-tag">Visual Studio</span>
+            <span class="tech-tag">VS Code</span>
+            <span class="tech-tag">NetBeans</span>
+            <span class="tech-tag">IntelliJ IDEA</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4><i class="fas fa-cloud"></i> Cloud Services & Deployment</h4>
+          <div class="tech-tags">
+            <span class="tech-tag">Azure</span>
+            <span class="tech-tag">Render</span>
+            <span class="tech-tag">GitHub</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4><i class="fas fa-plug"></i> API Work & Backend Design</h4>
+          <div class="tech-tags">
+            <span class="tech-tag">REST Client</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4><i class="fas fa-globe"></i> Web Development & Design</h4>
+          <div class="tech-tags">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">EJS</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">TypeScript</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4><i class="fas fa-code-branch"></i> Version Control & Workflow</h4>
+          <div class="tech-tags">
+            <span class="tech-tag">Git</span>
+            <span class="tech-tag">GitHub</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4><i class="fas fa-database"></i> Database Design & Architecture</h4>
+          <div class="tech-tags">
+            <span class="tech-tag">SQL</span>
+            <span class="tech-tag">SQL Server</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">Mongoose</span>
+            <span class="tech-tag">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section portfolio-section">
+      <h3 class="section-title">Example Projects</h3>
+      <p class="portfolio-description">
+        Below are some of the projects I'm most proud of - covering topics like machine learning, automation, dashboards, and more. Each one reflects both technical challenge and real-world impact.
+      </p>
+      <p class="portfolio-instruction">
+        Click on any project to view the source code on GitHub.
+      </p>
+
+      <div class="portfolio-gallery">
+        <a href="https://github.com/FreeYungHammy/TelegramBotWebhook" target="_blank" class="portfolio-item">
+          <img class="portfolio-image" src="img/portfolio1.png" alt="Telegram Bot Project"/>
+          <div class="portfolio-overlay">
+            <h4>Telegram Bot</h4>
+            <p>Webhook implementation</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/ChristopheThuwisPXL/CatchmentConnection" target="_blank" class="portfolio-item">
+          <img class="portfolio-image" src="img/portfolio2.png" alt="Catchment Connection Project"/>
+          <div class="portfolio-overlay">
+            <h4>Catchment Connection</h4>
+            <p>Water management solution</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/FreeYungHammy/MLG382-Project1" target="_blank" class="portfolio-item">
+          <img class="portfolio-image" src="img/portfolio3.png" alt="Machine Learning Project 1"/>
+          <div class="portfolio-overlay">
+            <h4>ML Project 1</h4>
+            <p>Machine learning application</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/FreeYungHammy/MLG382_Project2" target="_blank" class="portfolio-item">
+          <img class="portfolio-image" src="img/portfolio4.png" alt="Machine Learning Project 2"/>
+          <div class="portfolio-overlay">
+            <h4>ML Project 2</h4>
+            <p>Advanced ML implementation</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/FreeYungHammy/DBD_Project_Replica" target="_blank" class="portfolio-item">
+          <img class="portfolio-image" src="img/portfolio5.png" alt=""/>
+          <div class="portfolio-overlay">
+            <h4>Information Systems</h4>
+            <p>Data management solution</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="experience" class="section projects-section">
+      <h3 class="section-title">Technical Roles & Experience</h3>
+
+      <div class="project-item">
+        <h4 class="project-title"><i class="fa-brands fa-telegram"></i> Telegram Bot - netsellerpay.com | 2025</h4>
+        <p class="project-description">Designed and developed a fully functional Telegram bot that provided answers to commonly asked questions in various merchant supports groups. This includes looking up the status of transactions via a third-party API. Built using C#, deployed to an Azure WebApp.</p>
+      </div>
+
+      <div class="project-item">
+        <h4 class="project-title"><i class="fa-solid fa-globe"></i> International Mega Project - PXL University, Belgium | 2025</h4>
+        <p class="project-description">Participated in developing a solution to combat the growth of the Water Hyacinth which is currently invading many of South Africa's dams. We explored various current technologies during this project, such as Docker and TypeScript. We also implemented an Agile methodology and performed Scrum sprints throughout the project to standardize requirements.</p>
+      </div>
+
+      <div class="project-item">
+        <h4 class="project-title"><i class="fa-solid fa-robot"></i> Robotics Club – Lead Organizer | 2024</h4>
+        <p class="project-description">Established a robotics club on our Stellenbosch Campus to explore my own interests within robotics and in doing so created a platform for students to implement practical solutions using Arduinos, ESP32s and various other sensors. I managed various student projects that were presented on our Open Day last year.</p>
+      </div>
+    </section>
+
+    <section id="education" class="section education-section">
+      <h3 class="section-title">Education</h3>
+
+      <div class="education-timeline">
+        <div class="education-item">
+          <div class="education-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="education-content">
+            <h3 class="education-title">University</h3>
+            <h5 class="education-degree">Belgium Campus</h5>
+            <p class="education-details">Bachelor of Computing (BComp)</p>
+            <a class="education-date">Due to Complete: 2026</a>
+          </div>
+        </div>
+
+        <div class="education-item">
+          <div class="education-icon">
+            <i class="fas fa-school"></i>
+          </div>
+          <div class="education-content">
+            <h3 class="education-title">High School</h3>
+            <h5 class="education-degree">Greenwood Bay College</h5>
+            <p class="education-details">Matric - Cambridge Certified AS & IGCSE Levels</p>
+            <a class="education-date">Completed: 2022</a>
+          </div>
+        </div>
+
+        <div class="education-item">
+          <div class="education-icon">
+            <i class="fas fa-pencil-alt"></i>
+          </div>
+          <div class="education-content">
+            <h3 class="education-title">Primary School</h3>
+            <h5 class="education-degree">SAHETI School</h5>
+            <p class="education-details">South African CAPS. Grade 1 - 7.</p>
+            <a class="education-date">Completed: 2016</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills-section">
+      <h3 class="section-title">Personal Skills</h3>
+      <div class="skill-bar">
+        <div class="skill-title">
+          <span>Problem Solving</span>
+          <span class="skill-percent">90%</span>
+        </div>
+        <div class="progress-container">
+          <div class="progress-bar green" style="width: 90%"></div>
+        </div>
+      </div>
+
+      <div class="skill-bar">
+        <div class="skill-title">
+          <span>Tinkerer Mindset</span>
+          <span class="skill-percent">80%</span>
+        </div>
+        <div class="progress-container">
+          <div class="progress-bar orange" style="width: 80%"></div>
+        </div>
+      </div>
+
+      <div class="skill-bar">
+        <div class="skill-title">
+          <span>Technical Leadership</span>
+          <span class="skill-percent">85%</span>
+        </div>
+        <div class="progress-container">
+          <div class="progress-bar orange" style="width: 85%"></div>
+        </div>
+      </div>
+
+      <div class="skill-bar">
+        <div class="skill-title">
+          <span>Analytical Thinking</span>
+          <span class="skill-percent">75%</span>
+        </div>
+        <div class="progress-container">
+          <div class="progress-bar red" style="width: 75%"></div>
+        </div>
+      </div>
+
+      <div class="skill-bar">
+        <div class="skill-title">
+          <span>Clear Communicator</span>
+          <span class="skill-percent">80%</span>
+        </div>
+        <div class="progress-container">
+          <div class="progress-bar red" style="width: 80%"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="footer-text">© 2023 Calvin Nijenhuis. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="/js/script.js" defer></script>
+</body>
+</html>
